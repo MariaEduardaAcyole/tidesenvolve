@@ -1,0 +1,147 @@
+{
+  "formats": [
+    {
+      "id": 1,
+      "nome": "Formato Fofoca",
+      "icone": "message-circle-heart",
+      "descricao": "Conte o conteúdo como se fosse a última fofoca quente do grupo de amigos.",
+      "dicas": [
+        "Use tom informal e empolgado: 'Gente, vocês não vão acreditar...'",
+        "Crie suspense antes de revelar os detalhes técnicos",
+        "Finalize com uma opinião pessoal sobre o 'boato'"
+      ]
+    },
+    {
+      "id": 2,
+      "nome": "Formato Pitch",
+      "icone": "rocket",
+      "descricao": "Apresente como se estivesse vendendo a ideia para investidores em 60 segundos.",
+      "dicas": [
+        "Comece com o problema que a tecnologia resolve",
+        "Mostre números e impacto de forma direta",
+        "Termine com uma chamada para ação clara"
+      ]
+    },
+    {
+      "id": 3,
+      "nome": "Formato Notícia",
+      "icone": "newspaper",
+      "descricao": "Estruture como uma reportagem de telejornal, com manchete e especialistas.",
+      "dicas": [
+        "Abra com a manchete mais impactante do tema",
+        "Simule uma entrevista rápida com 'especialista'",
+        "Encerre com 'e essa foi a notícia de hoje'"
+      ]
+    },
+    {
+      "id": 4,
+      "nome": "Formato Thread do X",
+      "icone": "message-square-text",
+      "descricao": "Divida a explicação em uma sequência de posts curtos e diretos, tipo thread viral.",
+      "dicas": [
+        "Comece com um gancho forte: '1/ Você sabia que...'",
+        "Cada tópico deve caber em uma frase curta e objetiva",
+        "Feche com um resumo tipo 'TL;DR'"
+      ]
+    },
+    {
+      "id": 5,
+      "nome": "Formato Meme",
+      "icone": "laugh",
+      "descricao": "Explique o tema usando referências de memes e humor visual.",
+      "dicas": [
+        "Associe conceitos técnicos a situações engraçadas do dia a dia",
+        "Use comparações exageradas para fixar a informação",
+        "Não perca a precisão técnica em nome da piada"
+      ]
+    },
+    {
+      "id": 6,
+      "nome": "Formato Entrevista",
+      "icone": "mic",
+      "descricao": "Simule uma entrevista entre repórter e especialista sobre o tema.",
+      "dicas": [
+        "Prepare perguntas que guiem a explicação do início ao fim",
+        "Alterne entre os dois papéis com clareza",
+        "Deixe uma pergunta final provocativa em aberto"
+      ]
+    },
+    {
+      "id": 7,
+      "nome": "Formato Podcast",
+      "icone": "headphones",
+      "descricao": "Converse sobre o tema como em um episódio de podcast descontraído.",
+      "dicas": [
+        "Use uma abertura tipo 'Bem-vindos a mais um episódio'",
+        "Traga uma opinião pessoal sobre o assunto",
+        "Finalize convidando a audiência a comentar"
+      ]
+    },
+    {
+      "id": 8,
+      "nome": "Formato Aula",
+      "icone": "graduation-cap",
+      "descricao": "Ensine o conteúdo de forma didática, como um professor em sala de aula.",
+      "dicas": [
+        "Organize por tópicos: introdução, conceito, exemplo, resumo",
+        "Use analogias simples para conceitos complexos",
+        "Termine com uma pergunta de fixação"
+      ]
+    },
+    {
+      "id": 9,
+      "nome": "Formato Propaganda",
+      "icone": "megaphone",
+      "descricao": "Venda a tecnologia como um comercial de TV, com jingle e slogan.",
+      "dicas": [
+        "Crie um slogan curto e memorável para o tema",
+        "Exagere nos benefícios com entusiasmo publicitário",
+        "Finalize com uma chamada tipo 'ligue já'"
+      ]
+    },
+    {
+      "id": 10,
+      "nome": "Formato Stand-up",
+      "icone": "sparkles",
+      "descricao": "Apresente como um show de comédia stand-up sobre as dores da tecnologia.",
+      "dicas": [
+        "Comece com uma observação engraçada e relatable",
+        "Use timing cômico entre a explicação e a piada",
+        "Termine com uma frase de efeito"
+      ]
+    },
+    {
+      "id": 11,
+      "nome": "Formato Debate",
+      "icone": "swords",
+      "descricao": "Apresente prós e contras do tema como em um debate com dois lados.",
+      "dicas": [
+        "Defina claramente os dois lados do argumento",
+        "Apresente evidências para cada posição",
+        "Conclua com uma síntese equilibrada"
+      ]
+    },
+    {
+      "id": 12,
+      "nome": "Formato Storytelling",
+      "icone": "book-open",
+      "descricao": "Conte a evolução da tecnologia como uma história com começo, meio e fim.",
+      "dicas": [
+        "Crie um 'personagem' ou problema inicial para guiar a narrativa",
+        "Mostre a jornada e os desafios superados",
+        "Finalize com a lição ou impacto atual"
+      ]
+    },
+    {
+      "id": 13,
+      "nome": "Formato TED Talk",
+      "icone": "presentation",
+      "descricao": "Apresente de forma inspiradora e estruturada como uma palestra TED.",
+      "dicas": [
+        "Abra com uma história pessoal ou pergunta provocativa",
+        "Estruture em três ideias centrais no máximo",
+        "Encerre com uma mensagem inspiradora e memorável"
+      ]
+    }
+  ]
+}

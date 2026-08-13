@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TIDESENVOLVE — Pesquise. Aprenda. Apresente. Evolua.</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="animations.css" />
+  </head>
+  <body>
+    <!-- Fundo com partículas -->
+    <canvas id="particle-bg"></canvas>
+    <div class="grid-overlay"></div>
+
+    <!-- Barra de progresso das etapas -->
+    <nav
+      class="stage-tracker"
+      id="stage-tracker"
+      aria-label="Progresso da sessão"
+    >
+      <ol>
+        <li data-stage="inicio" class="active">
+          <span class="stage-dot"></span><span class="stage-label">Início</span>
+        </li>
+        <li data-stage="tema">
+          <span class="stage-dot"></span><span class="stage-label">Tema</span>
+        </li>
+        <li data-stage="fontes">
+          <span class="stage-dot"></span><span class="stage-label">Fontes</span>
+        </li>
+        <li data-stage="pesquisa">
+          <span class="stage-dot"></span
+          ><span class="stage-label">Pesquisa</span>
+        </li>
+        <li data-stage="formato">
+          <span class="stage-dot"></span
+          ><span class="stage-label">Formato</span>
+        </li>
+        <li data-stage="apresentacao">
+          <span class="stage-dot"></span
+          ><span class="stage-label">Apresentação</span>
+        </li>
+        <li data-stage="resultado">
+          <span class="stage-dot"></span
+          ><span class="stage-label">Resultado</span>
+        </li>
+      </ol>
+    </nav>
+
+    <main id="app">
+      <!-- ETAPA 0: Tela inicial -->
+      <section class="screen active" id="screen-inicio" data-screen="inicio">
+        <div class="hero">
+          <div class="hero-badge">
+            <i data-lucide="zap"></i> plataforma gamificada de estudo tech
+          </div>
+          <h1 class="logo-title">
+            <span class="logo-ti">TI</span
+            ><span class="logo-desenvolve">DESENVOLVE</span>
+          </h1>
+          <p class="subtitle">Pesquise. Aprenda. Apresente. Evolua.</p>
+          <p class="hero-desc">
+            Sorteie um tema de tecnologia, estude com fontes confiáveis,
+            cronometre sua pesquisa e apresente no formato mais inesperado. Cada
+            rodada é uma nova jornada.
+          </p>
+          <button class="btn btn-primary btn-glow btn-large" id="btn-iniciar">
+            <i data-lucide="play"></i>Iniciar sessão
+          </button>
+
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <span class="hero-stat-num">20</span
+              ><span class="hero-stat-label">temas tech</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-num">13</span
+              ><span class="hero-stat-label">formatos</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-num">22</span
+              ><span class="hero-stat-label">fontes confiáveis</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ETAPA 1: Roleta de temas -->
+      <section class="screen" id="screen-tema" data-screen="tema">
+        <h2 class="screen-title">
+          <i data-lucide="dices"></i> Sorteio de tema
+        </h2>
+        <p class="screen-subtitle">
+          Gire a roleta e descubra qual tecnologia você vai dominar nesta
+          rodada.
+        </p>
+       <div class="slot-machine">
+
+    <div class="slot-window">
+
+        <div class="slot-track" id="slot-track"></div>
+
+        <div class="slot-highlight"></div>
+
+    </div>
+
+    <!-- MANIVELA -->
+    <div class="slot-lever-area">
+
+        <div
+            class="slot-lever"
+            id="slot-lever"
+            role="button"
+            tabindex="0"
+            aria-label="Girar roleta"
+        >
+
+            <div class="lever-arm">
+                <div class="lever-handle"></div>
+            </div>
+
+            <div class="lever-base"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<button
+    id="btn-girar"
+    class="btn btn-primary btn-glow btn-large"
+>
+    <i data-lucide="rotate-cw"></i>
+    Girar roleta
+</button>
+     
+        <div class="result-card hidden" id="tema-result-card">
+          <div class="result-icon" id="tema-result-icon">
+            <i data-lucide="cpu"></i>
+          </div>
+          <div class="result-info">
+            <span class="result-eyebrow">Tema sorteado</span>
+            <h3 id="tema-result-nome">—</h3>
+            <span class="result-tag" id="tema-result-categoria">—</span>
+          </div>
+
+          <div class="result-actions">
+          
+            <button class="btn btn-primary" id="btn-aceitar-tema">
+              <i data-lucide="check"></i> Aceitar tema
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ETAPA 2: Biblioteca de fontes -->
+      <section class="screen" id="screen-fontes" data-screen="fontes">
+        <h2 class="screen-title">
+          <i data-lucide="library"></i> Biblioteca de fontes confiáveis
+        </h2>
+        <p class="screen-subtitle">
+          Tema atual: <strong id="fontes-tema-atual">—</strong>. Escolha onde
+          pesquisar.
+        </p>
+
+        <div class="tabs" id="fontes-tabs" role="tablist"></div>
+        <div class="sources-grid" id="sources-grid"></div>
+
+        <button
+          class="btn btn-primary btn-glow btn-large"
+          id="btn-iniciar-pesquisa"
+        >
+          <i data-lucide="timer"></i> Iniciar cronômetro de pesquisa
+        </button>
+      </section>
+
+      <!-- ETAPA 3: Cronômetro de pesquisa -->
+      <section class="screen" id="screen-pesquisa" data-screen="pesquisa">
+        <h2 class="screen-title">
+          <i data-lucide="search"></i> Cronômetro de pesquisa
+        </h2>
+        <p class="screen-subtitle">
+          Foque no tema <strong id="pesquisa-tema-atual">—</strong> até o tempo
+          acabar.
+        </p>
+
+        <div class="time-presets" id="pesquisa-presets" data-timer="pesquisa">
+          <button class="preset-btn" data-min="1">1 min</button>
+          <button class="preset-btn" data-min="5">5 min</button>
+          <button class="preset-btn active" data-min="10">10 min</button>
+          <button class="preset-btn" data-min="20">20 min</button>
+          <button class="preset-btn" data-min="30">30 min</button>
+          <div class="preset-custom">
+            <input
+              type="number"
+              min="1"
+              max="180"
+              id="pesquisa-custom-input"
+              placeholder="min"
+            />
+            <button class="preset-btn" id="pesquisa-custom-btn">Definir</button>
+          </div>
+        </div>
+
+        <div class="timer-wrap">
+          <svg class="timer-ring" viewBox="0 0 220 220">
+            <circle class="timer-ring-bg" cx="110" cy="110" r="100"></circle>
+            <circle
+              class="timer-ring-fg"
+              id="pesquisa-ring"
+              cx="110"
+              cy="110"
+              r="100"
+            ></circle>
+          </svg>
+          <div class="timer-center">
+            <span class="timer-display" id="pesquisa-display">15:00</span>
+            <span class="timer-status" id="pesquisa-status">pronto</span>
+          </div>
+        </div>
+
+        <div class="timer-controls">
+          <button
+            class="btn btn-icon"
+            id="pesquisa-btn-reiniciar"
+            title="Reiniciar"
+          >
+            <i data-lucide="rotate-ccw"></i>
+          </button>
+          <button
+            class="btn btn-primary btn-glow btn-large"
+            id="pesquisa-btn-play"
+          >
+            <i data-lucide="play"></i> Iniciar
+          </button>
+          <button
+            class="btn btn-icon"
+            id="pesquisa-btn-skip"
+            title="Pular etapa"
+          >
+            <i data-lucide="skip-forward"></i>
+          </button>
+        </div>
+      </section>
+
+   <!-- ETAPA 4: Sorteio do formato -->
+<section class="screen" id="screen-formato" data-screen="formato">
+
+  <h2 class="screen-title">
+    <i data-lucide="shuffle"></i>
+    Sorteio do formato de apresentação
+  </h2>
+
+  <p class="screen-subtitle">
+    Como você vai contar tudo o que aprendeu sobre
+    <strong id="formato-tema-atual">—</strong>?
+  </p>
+
+
+  <!-- MÁQUINA DE SORTEIO -->
+  <div class="format-slot-machine">
+
+    <!-- Moldura -->
+    <div class="format-slot-frame">
+
+      <!-- Janela -->
+      <div class="format-slot-window">
+
+        <!-- Trilho que vai se mover -->
+        <div
+          class="format-slot-track"
+          id="format-slot"
+        ></div>
+
+      </div>
+
+      <!-- Destaque central -->
+      <div class="format-slot-highlight"></div>
+
+    </div>
+
+  </div>
+
+
+  <!-- BOTÃO -->
+  <button
+    class="btn btn-primary btn-glow btn-large"
+    id="btn-sortear-formato"
+  >
+    <i data-lucide="wand-sparkles"></i>
+    Sortear formato
+  </button>
+
+
+  <!-- RESULTADO -->
+  <div
+    class="result-card format-result hidden"
+    id="formato-result-card"
+  >
+
+    <div
+      class="result-icon"
+      id="formato-result-icon"
+    >
+      <i data-lucide="presentation"></i>
+    </div>
+
+    <div class="result-info">
+
+      <span class="result-eyebrow">
+        Formato sorteado
+      </span>
+
+      <h3 id="formato-result-nome">—</h3>
+
+      <p id="formato-result-desc">—</p>
+
+      <ul
+        class="tips-list"
+        id="formato-result-dicas"
+      ></ul>
+
+    </div>
+
+    <div class="result-actions">
+
+      <button
+        class="btn btn-ghost"
+        id="btn-sortear-novamente-formato"
+      >
+        <i data-lucide="repeat"></i>
+        Sortear novamente
+      </button>
+
+      <button
+        class="btn btn-primary"
+        id="btn-ir-apresentar"
+      >
+        <i data-lucide="mic-2"></i>
+        Ir para apresentação
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+      <!-- ETAPA 5: Cronômetro de apresentação -->
+      <section
+        class="screen"
+        id="screen-apresentacao"
+        data-screen="apresentacao"
+      >
+        <h2 class="screen-title">
+          <i data-lucide="presentation"></i> Cronômetro de apresentação
+        </h2>
+        <p class="screen-subtitle">
+          Formato: <strong id="apresentacao-formato-atual">—</strong>
+        </p>
+
+        <div
+          class="time-presets"
+          id="apresentacao-presets"
+          data-timer="apresentacao"
+        >
+          <button class="preset-btn" data-min="1">1 min</button>
+          <button class="preset-btn active" data-min="3">3 min</button>
+          <button class="preset-btn" data-min="5">5 min</button>
+          <button class="preset-btn" data-min="10">10 min</button>
+          <div class="preset-custom">
+            <input
+              type="number"
+              min="1"
+              max="60"
+              id="apresentacao-custom-input"
+              placeholder="min"
+            />
+            <button class="preset-btn" id="apresentacao-custom-btn">
+              Definir
+            </button>
+          </div>
+        </div>
+
+        <div class="timer-wrap">
+          <svg class="timer-ring" viewBox="0 0 220 220">
+            <circle class="timer-ring-bg" cx="110" cy="110" r="100"></circle>
+            <circle
+              class="timer-ring-fg"
+              id="apresentacao-ring"
+              cx="110"
+              cy="110"
+              r="100"
+            ></circle>
+          </svg>
+          <div class="timer-center">
+            <span class="timer-display" id="apresentacao-display">05:00</span>
+            <span class="timer-status" id="apresentacao-status">pronto</span>
+          </div>
+        </div>
+
+        <div class="progress-bar-wrap">
+          <div class="progress-bar" id="apresentacao-progress"></div>
+        </div>
+
+        <div class="timer-controls">
+          <button
+            class="btn btn-icon"
+            id="apresentacao-btn-reiniciar"
+            title="Reiniciar"
+          >
+            <i data-lucide="rotate-ccw"></i>
+          </button>
+          <button
+            class="btn btn-primary btn-glow btn-large"
+            id="apresentacao-btn-play"
+          >
+            <i data-lucide="play"></i> Iniciar
+          </button>
+          <button
+            class="btn btn-icon"
+            id="apresentacao-btn-skip"
+            title="Pular etapa"
+          >
+            <i data-lucide="skip-forward"></i>
+          </button>
+        </div>
+      </section>
+
+      <!-- ETAPA 6: Resultado final -->
+    <!-- ETAPA FINAL -->
+<section class="screen" id="screen-resultado" data-screen="resultado">
+
+    <div class="final-page">
+
+        <!-- Ícone principal -->
+        <div class="final-icon">
+            <i data-lucide="trophy"></i>
+        </div>
+
+        <span class="final-eyebrow">
+            RODADA CONCLUÍDA
+        </span>
+
+        <h1 class="final-title">
+            Você chegou ao fim.
+        </h1>
+
+        <p class="final-subtitle">
+            Mas o aprendizado continua.
+        </p>
+
+
+        <!-- Resumo -->
+        <div class="final-summary">
+
+            <div class="final-item">
+                <span class="final-label">TEMA</span>
+                <strong id="resumo-tema">—</strong>
+            </div>
+
+            <div class="final-item">
+                <span class="final-label">PESQUISA</span>
+                <strong id="resumo-pesquisa">—</strong>
+            </div>
+
+            <div class="final-item">
+                <span class="final-label">FORMATO</span>
+                <strong id="resumo-formato">—</strong>
+            </div>
+
+            <div class="final-item">
+                <span class="final-label">APRESENTAÇÃO</span>
+                <strong id="resumo-apresentacao">—</strong>
+            </div>
+
+        </div>
+
+
+        <!-- Mensagem -->
+        <div class="final-message">
+
+            <i data-lucide="sparkles"></i>
+
+            <p>
+                Pesquisar é descobrir.
+                Aprender é transformar.
+                Apresentar é compartilhar.
+            </p>
+
+            <strong>
+                Continue desenvolvendo.
+            </strong>
+
+        </div>
+
+
+        <!-- Ação -->
+        <button
+            class="btn btn-primary btn-glow btn-large"
+            id="btn-nova-rodada"
+        >
+            <i data-lucide="refresh-cw"></i>
+            Começar nova rodada
+        </button>
+
+
+        <p class="final-brand">
+            TIDESENVOLVE
+        </p>
+
+    </div>
+
+</section>
+    </main>
+
+    <!-- Áudio de conclusão -->
+    <audio id="sound-complete" preload="auto"></audio>
+
+   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+<script src="./app.js"></script>
+<script src="./roulette.js"></script>
+<script src="./timer.js"></script>
+<script src="./presentation.js"></script>
+<script src="./library.js"></script>
+<script src="./resultado.js"></script>
+
+  </body>
+</html>

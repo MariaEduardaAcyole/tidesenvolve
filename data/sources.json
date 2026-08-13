@@ -1,0 +1,157 @@
+{
+  "categorias": [
+    {
+      "id": "instituicoes",
+      "nome": "Instituições de Ensino",
+      "icone": "landmark",
+      "fontes": [
+        {
+          "nome": "FIAP",
+          "descricao": "Cursos e conteúdos livres sobre tecnologia e inovação.",
+          "link": "https://www.fiap.com.br",
+          "icone": "school"
+        },
+        {
+          "nome": "USP",
+          "descricao": "Materiais acadêmicos e pesquisas da Universidade de São Paulo.",
+          "link": "https://www.usp.br",
+          "icone": "school"
+        },
+        {
+          "nome": "UNICAMP",
+          "descricao": "Produção científica e cursos da Universidade Estadual de Campinas.",
+          "link": "https://www.unicamp.br",
+          "icone": "school"
+        },
+        {
+          "nome": "MIT",
+          "descricao": "Massachusetts Institute of Technology — cursos abertos via MIT OpenCourseWare.",
+          "link": "https://ocw.mit.edu",
+          "icone": "graduation-cap"
+        },
+        {
+          "nome": "Stanford",
+          "descricao": "Recursos e pesquisas da Stanford University em ciência da computação.",
+          "link": "https://cs.stanford.edu",
+          "icone": "graduation-cap"
+        },
+        {
+          "nome": "Harvard",
+          "descricao": "Cursos abertos, incluindo o famoso CS50, da Harvard University.",
+          "link": "https://www.harvard.edu",
+          "icone": "graduation-cap"
+        },
+        {
+          "nome": "Coursera",
+          "descricao": "Plataforma com cursos de universidades e empresas parceiras.",
+          "link": "https://www.coursera.org",
+          "icone": "monitor-play"
+        },
+        {
+          "nome": "edX",
+          "descricao": "Cursos online de instituições como Harvard, MIT e Berkeley.",
+          "link": "https://www.edx.org",
+          "icone": "monitor-play"
+        },
+        {
+          "nome": "AWS Skill Builder",
+          "descricao": "Treinamentos oficiais da Amazon Web Services em nuvem.",
+          "link": "https://skillbuilder.aws",
+          "icone": "cloud-cog"
+        },
+        {
+          "nome": "Google Cloud Skills Boost",
+          "descricao": "Trilhas de aprendizado oficiais do Google Cloud.",
+          "link": "https://www.cloudskillsboost.google",
+          "icone": "cloud-cog"
+        },
+        {
+          "nome": "Microsoft Learn",
+          "descricao": "Documentação e trilhas de aprendizado gratuitas da Microsoft.",
+          "link": "https://learn.microsoft.com",
+          "icone": "cloud-cog"
+        }
+      ]
+    },
+    {
+      "id": "documentacao",
+      "nome": "Documentação Oficial",
+      "icone": "book-marked",
+      "fontes": [
+        {
+          "nome": "MDN",
+          "descricao": "Documentação de referência para desenvolvimento web (Mozilla).",
+          "link": "https://developer.mozilla.org",
+          "icone": "file-code"
+        },
+        {
+          "nome": "W3C",
+          "descricao": "Padrões oficiais da web mantidos pelo World Wide Web Consortium.",
+          "link": "https://www.w3.org",
+          "icone": "file-code"
+        },
+        {
+          "nome": "Python Docs",
+          "descricao": "Documentação oficial da linguagem Python.",
+          "link": "https://docs.python.org/3/",
+          "icone": "file-code"
+        },
+        {
+          "nome": "Node.js Docs",
+          "descricao": "Documentação oficial do runtime Node.js.",
+          "link": "https://nodejs.org/en/docs",
+          "icone": "file-code"
+        },
+        {
+          "nome": "React Docs",
+          "descricao": "Documentação oficial da biblioteca React.",
+          "link": "https://react.dev",
+          "icone": "file-code"
+        },
+        {
+          "nome": "Docker Docs",
+          "descricao": "Documentação oficial de containers Docker.",
+          "link": "https://docs.docker.com",
+          "icone": "file-code"
+        },
+        {
+          "nome": "Kubernetes Docs",
+          "descricao": "Documentação oficial de orquestração de containers.",
+          "link": "https://kubernetes.io/docs/home/",
+          "icone": "file-code"
+        }
+      ]
+    },
+    {
+      "id": "pesquisa",
+      "nome": "Artigos e Pesquisa",
+      "icone": "flask-conical",
+      "fontes": [
+        {
+          "nome": "IEEE",
+          "descricao": "Publicações científicas de engenharia e tecnologia.",
+          "link": "https://www.ieee.org",
+          "icone": "file-text"
+        },
+        {
+          "nome": "ACM",
+          "descricao": "Biblioteca digital da Association for Computing Machinery.",
+          "link": "https://dl.acm.org",
+          "icone": "file-text"
+        },
+        {
+          "nome": "Google Scholar",
+          "descricao": "Buscador acadêmico para artigos e citações científicas.",
+          "link": "https://scholar.google.com",
+          "icone": "file-text"
+        },
+        {
+          "nome": "arXiv",
+          "descricao": "Repositório de pré-publicações científicas em diversas áreas.",
+          "link": "https://arxiv.org",
+          "icone": "file-text"
+        }
+      ]
+    }
+  ]
+}
