@@ -1,24 +1,334 @@
 {
   "themes": [
-    { "id": 1, "nome": "Inteligência Artificial", "categoria": "IA", "icone": "brain-circuit", "cor": "#00F5D4" },
-    { "id": 2, "nome": "Computação em Nuvem", "categoria": "Infraestrutura", "icone": "cloud", "cor": "#0066FF" },
-    { "id": 3, "nome": "DevOps", "categoria": "Infraestrutura", "icone": "infinity", "cor": "#7B2EFF" },
-    { "id": 4, "nome": "Cibersegurança", "categoria": "Segurança", "icone": "shield-alert", "cor": "#FF4DFF" },
-    { "id": 5, "nome": "Blockchain", "categoria": "Web3", "icone": "link-2", "cor": "#00F5D4" },
-    { "id": 6, "nome": "IoT", "categoria": "Hardware", "icone": "wifi", "cor": "#0066FF" },
-    { "id": 7, "nome": "Engenharia de Dados", "categoria": "Dados", "icone": "database-zap", "cor": "#7B2EFF" },
-    { "id": 8, "nome": "Machine Learning", "categoria": "IA", "icone": "cpu", "cor": "#FF4DFF" },
-    { "id": 9, "nome": "APIs", "categoria": "Desenvolvimento", "icone": "plug-zap", "cor": "#00F5D4" },
-    { "id": 10, "nome": "Containers", "categoria": "Infraestrutura", "icone": "container", "cor": "#0066FF" },
-    { "id": 11, "nome": "Kubernetes", "categoria": "Infraestrutura", "icone": "ship-wheel", "cor": "#7B2EFF" },
-    { "id": 12, "nome": "LGPD", "categoria": "Governança", "icone": "file-lock-2", "cor": "#FF4DFF" },
-    { "id": 13, "nome": "UX/UI", "categoria": "Design", "icone": "layout-panel-top", "cor": "#00F5D4" },
-    { "id": 14, "nome": "Front-end", "categoria": "Desenvolvimento", "icone": "code-2", "cor": "#0066FF" },
-    { "id": 15, "nome": "Back-end", "categoria": "Desenvolvimento", "icone": "server", "cor": "#7B2EFF" },
-    { "id": 16, "nome": "Banco de Dados", "categoria": "Dados", "icone": "database", "cor": "#FF4DFF" },
-    { "id": 17, "nome": "Big Data", "categoria": "Dados", "icone": "bar-chart-4", "cor": "#00F5D4" },
-    { "id": 18, "nome": "Edge Computing", "categoria": "Infraestrutura", "icone": "radio-tower", "cor": "#0066FF" },
-    { "id": 19, "nome": "Computação Quântica", "categoria": "Emergente", "icone": "atom", "cor": "#7B2EFF" },
-    { "id": 20, "nome": "Agentes de IA", "categoria": "IA", "icone": "bot", "cor": "#FF4DFF" }
+    {
+      "id": 1,
+      "nome": "Lei de Conway",
+      "categoria": "Arquitetura",
+      "icone": "network",
+      "cor": "#00F5D4"
+    },
+    {
+      "id": 2,
+      "nome": "Brooks’ Law",
+      "categoria": "Gestão de Software",
+      "icone": "users",
+      "cor": "#0066FF"
+    },
+    {
+      "id": 3,
+      "nome": "Princípio KISS",
+      "categoria": "Boas Práticas",
+      "icone": "sparkles",
+      "cor": "#7B2EFF"
+    },
+    {
+      "id": 4,
+      "nome": "Princípio YAGNI",
+      "categoria": "Boas Práticas",
+      "icone": "circle-slash",
+      "cor": "#FF4DFF"
+    },
+    {
+      "id": 5,
+      "nome": "DRY (Don’t Repeat Yourself)",
+      "categoria": "Boas Práticas",
+      "icone": "copy",
+      "cor": "#00F5D4"
+    },
+    {
+      "id": 6,
+      "nome": "SOLID",
+      "categoria": "Design de Software",
+      "icone": "layers",
+      "cor": "#0066FF"
+    },
+    {
+      "id": 7,
+      "nome": "Clean Architecture",
+      "categoria": "Arquitetura",
+      "icone": "building",
+      "cor": "#7B2EFF"
+    },
+    {
+      "id": 8,
+      "nome": "Hexagonal Architecture",
+      "categoria": "Arquitetura",
+      "icone": "hexagon",
+      "cor": "#FF4DFF"
+    },
+    {
+      "id": 9,
+      "nome": "Event-Driven Architecture",
+      "categoria": "Arquitetura",
+      "icone": "zap",
+      "cor": "#00F5D4"
+    },
+    {
+      "id": 10,
+      "nome": "CQRS (Command Query Responsibility Segregation)",
+      "categoria": "Arquitetura",
+      "icone": "split",
+      "cor": "#0066FF"
+    },
+    {
+      "id": 11,
+      "nome": "Event Sourcing",
+      "categoria": "Arquitetura",
+      "icone": "history",
+      "cor": "#7B2EFF"
+    },
+    {
+      "id": 12,
+      "nome": "CAP Theorem",
+      "categoria": "Sistemas Distribuídos",
+      "icone": "globe",
+      "cor": "#FF4DFF"
+    },
+    {
+      "id": 13,
+      "nome": "Teorema PACELC",
+      "categoria": "Sistemas Distribuídos",
+      "icone": "git-branch",
+      "cor": "#00F5D4"
+    },
+    {
+      "id": 14,
+      "nome": "Consenso Distribuído (Raft vs Paxos)",
+      "categoria": "Sistemas Distribuídos",
+      "icone": "waypoints",
+      "cor": "#0066FF"
+    },
+    {
+      "id": 15,
+      "nome": "Idempotência em APIs",
+      "categoria": "Backend",
+      "icone": "repeat",
+      "cor": "#7B2EFF"
+    },
+    {
+      "id": 16,
+      "nome": "Circuit Breaker Pattern",
+      "categoria": "Arquitetura",
+      "icone": "shield",
+      "cor": "#FF4DFF"
+    },
+    {
+      "id": 17,
+      "nome": "Retry com Exponential Backoff",
+      "categoria": "Arquitetura",
+      "icone": "rotate-ccw",
+      "cor": "#00F5D4"
+    },
+    {
+      "id": 18,
+      "nome": "Cache Invalidation",
+      "categoria": "Performance",
+      "icone": "gauge",
+      "cor": "#0066FF"
+    },
+    {
+      "id": 19,
+      "nome": "Bloom Filter",
+      "categoria": "Estruturas de Dados",
+      "icone": "filter",
+      "cor": "#7B2EFF"
+    },
+    {
+      "id": 20,
+      "nome": "Consistent Hashing",
+      "categoria": "Sistemas Distribuídos",
+      "icone": "hash",
+      "cor": "#FF4DFF"
+    },
+    {
+      "id": 21,
+      "nome": "B-Tree e B+Tree",
+      "categoria": "Banco de Dados",
+      "icone": "database",
+      "cor": "#00F5D4"
+    },
+    {
+      "id": 22,
+      "nome": "MVCC (Multi-Version Concurrency Control)",
+      "categoria": "Banco de Dados",
+      "icone": "database-zap",
+      "cor": "#0066FF"
+    },
+    {
+      "id": 23,
+      "nome": "Índices em Bancos de Dados",
+      "categoria": "Banco de Dados",
+      "icone": "search",
+      "cor": "#7B2EFF"
+    },
+    {
+      "id": 24,
+      "nome": "Normalização vs Desnormalização",
+      "categoria": "Banco de Dados",
+      "icone": "table",
+      "cor": "#FF4DFF"
+    },
+    {
+      "id": 25,
+      "nome": "Data Lakehouse",
+      "categoria": "Engenharia de Dados",
+      "icone": "warehouse",
+      "cor": "#00F5D4"
+    },
+    {
+      "id": 26,
+      "nome": "ETL vs ELT",
+      "categoria": "Engenharia de Dados",
+      "icone": "workflow",
+      "cor": "#0066FF"
+    },
+    {
+      "id": 27,
+      "nome": "Arquitetura Lambda",
+      "categoria": "Engenharia de Dados",
+      "icone": "git-merge",
+      "cor": "#7B2EFF"
+    },
+    {
+      "id": 28,
+      "nome": "Arquitetura Kappa",
+      "categoria": "Engenharia de Dados",
+      "icone": "arrow-right-left",
+      "cor": "#FF4DFF"
+    },
+    {
+      "id": 29,
+      "nome": "Observabilidade (Logs, Métricas e Traces)",
+      "categoria": "DevOps",
+      "icone": "activity",
+      "cor": "#00F5D4"
+    },
+    {
+      "id": 30,
+      "nome": "SRE e Error Budgets",
+      "categoria": "DevOps",
+      "icone": "shield-check",
+      "cor": "#0066FF"
+    },
+    {
+      "id": 31,
+      "nome": "Blue-Green Deployment",
+      "categoria": "DevOps",
+      "icone": "git-compare",
+      "cor": "#7B2EFF"
+    },
+    {
+      "id": 32,
+      "nome": "Canary Deployment",
+      "categoria": "DevOps",
+      "icone": "bird",
+      "cor": "#FF4DFF"
+    },
+    {
+      "id": 33,
+      "nome": "Zero Trust",
+      "categoria": "Segurança",
+      "icone": "lock",
+      "cor": "#00F5D4"
+    },
+    {
+      "id": 34,
+      "nome": "Threat Modeling",
+      "categoria": "Segurança",
+      "icone": "shield-alert",
+      "cor": "#0066FF"
+    },
+    {
+      "id": 35,
+      "nome": "OWASP Top 10",
+      "categoria": "Segurança",
+      "icone": "bug",
+      "cor": "#7B2EFF"
+    },
+    {
+      "id": 36,
+      "nome": "Feature Flags",
+      "categoria": "Produto",
+      "icone": "flag",
+      "cor": "#FF4DFF"
+    },
+    {
+      "id": 37,
+      "nome": "A/B Testing",
+      "categoria": "Produto",
+      "icone": "flask-conical",
+      "cor": "#00F5D4"
+    },
+    {
+      "id": 38,
+      "nome": "Efeito Dunning-Kruger na Tecnologia",
+      "categoria": "Carreira",
+      "icone": "brain",
+      "cor": "#0066FF"
+    },
+    {
+      "id": 39,
+      "nome": "Antifragilidade em Sistemas",
+      "categoria": "Carreira",
+      "icone": "flame",
+      "cor": "#7B2EFF"
+    },
+    {
+      "id": 40,
+      "nome": "First Principles Thinking",
+      "categoria": "Carreira",
+      "icone": "lightbulb",
+      "cor": "#FF4DFF"
+    },
+    { "id": 41, "nome": "Princípio de Pareto (80/20)", "categoria": "Produtividade", "icone": "chart-pie", "cor": "#00F5D4" },
+    { "id": 42, "nome": "Lei de Parkinson", "categoria": "Produtividade", "icone": "clock", "cor": "#0066FF" },
+    { "id": 43, "nome": "Lei de Goodhart", "categoria": "Tomada de Decisão", "icone": "target", "cor": "#7B2EFF" },
+    { "id": 44, "nome": "Navalha de Occam", "categoria": "Tomada de Decisão", "icone": "scissors", "cor": "#FF4DFF" },
+    { "id": 45, "nome": "Teoria das Restrições", "categoria": "Gestão", "icone": "link", "cor": "#00F5D4" },
+    { "id": 46, "nome": "Flywheel Effect", "categoria": "Estratégia", "icone": "rotate-cw", "cor": "#0066FF" },
+    { "id": 47, "nome": "Platform Engineering", "categoria": "DevOps", "icone": "layers-3", "cor": "#7B2EFF" },
+    { "id": 48, "nome": "Infrastructure as Code (IaC)", "categoria": "DevOps", "icone": "file-code", "cor": "#FF4DFF" },
+    { "id": 49, "nome": "GitOps", "categoria": "DevOps", "icone": "git-branch", "cor": "#00F5D4" },
+    { "id": 50, "nome": "Chaos Engineering", "categoria": "DevOps", "icone": "flame", "cor": "#0066FF" },
+    { "id": 51, "nome": "Twelve-Factor App", "categoria": "Arquitetura", "icone": "app-window", "cor": "#7B2EFF" },
+    { "id": 52, "nome": "Domain-Driven Design (DDD)", "categoria": "Arquitetura", "icone": "building-2", "cor": "#FF4DFF" },
+    { "id": 53, "nome": "Bounded Context", "categoria": "Arquitetura", "icone": "square-stack", "cor": "#00F5D4" },
+    { "id": 54, "nome": "Saga Pattern", "categoria": "Arquitetura", "icone": "route", "cor": "#0066FF" },
+    { "id": 55, "nome": "Outbox Pattern", "categoria": "Arquitetura", "icone": "mail", "cor": "#7B2EFF" },
+    { "id": 56, "nome": "Bulkhead Pattern", "categoria": "Arquitetura", "icone": "shield", "cor": "#FF4DFF" },
+    { "id": 57, "nome": "API Gateway Pattern", "categoria": "Arquitetura", "icone": "waypoints", "cor": "#00F5D4" },
+    { "id": 58, "nome": "Strangler Fig Pattern", "categoria": "Arquitetura", "icone": "tree-pine", "cor": "#0066FF" },
+    { "id": 59, "nome": "Sharding", "categoria": "Banco de Dados", "icone": "database", "cor": "#7B2EFF" },
+    { "id": 60, "nome": "Replication em Bancos de Dados", "categoria": "Banco de Dados", "icone": "copy", "cor": "#FF4DFF" },
+    { "id": 61, "nome": "Particionamento de Dados", "categoria": "Banco de Dados", "icone": "table", "cor": "#00F5D4" },
+    { "id": 62, "nome": "Data Mesh", "categoria": "Engenharia de Dados", "icone": "network", "cor": "#0066FF" },
+    { "id": 63, "nome": "CDC (Change Data Capture)", "categoria": "Engenharia de Dados", "icone": "refresh-cw", "cor": "#7B2EFF" },
+    { "id": 64, "nome": "Schema Evolution", "categoria": "Engenharia de Dados", "icone": "git-pull-request", "cor": "#FF4DFF" },
+    { "id": 65, "nome": "Vector Databases", "categoria": "IA", "icone": "database-zap", "cor": "#00F5D4" },
+    { "id": 66, "nome": "Embeddings", "categoria": "IA", "icone": "brain-circuit", "cor": "#0066FF" },
+    { "id": 67, "nome": "RAG (Retrieval-Augmented Generation)", "categoria": "IA", "icone": "search", "cor": "#7B2EFF" },
+    { "id": 68, "nome": "Prompt Engineering", "categoria": "IA", "icone": "message-square", "cor": "#FF4DFF" },
+    { "id": 69, "nome": "Fine-Tuning de Modelos", "categoria": "IA", "icone": "cpu", "cor": "#00F5D4" },
+    { "id": 70, "nome": "Agentes Autônomos de IA", "categoria": "IA", "icone": "bot", "cor": "#0066FF" },
+    { "id": 71, "nome": "Model Context Protocol (MCP)", "categoria": "IA", "icone": "plug-zap", "cor": "#7B2EFF" },
+    { "id": 72, "nome": "Explainable AI (XAI)", "categoria": "IA", "icone": "eye", "cor": "#FF4DFF" },
+    { "id": 73, "nome": "Privacy by Design", "categoria": "Segurança", "icone": "shield-check", "cor": "#00F5D4" },
+    { "id": 74, "nome": "Defense in Depth", "categoria": "Segurança", "icone": "shield", "cor": "#0066FF" },
+    { "id": 75, "nome": "Supply Chain Security", "categoria": "Segurança", "icone": "package", "cor": "#7B2EFF" },
+    { "id": 76, "nome": "Design Patterns (GoF)", "categoria": "Design de Software", "icone": "shapes", "cor": "#FF4DFF" },
+    { "id": 77, "nome": "Observer Pattern", "categoria": "Design de Software", "icone": "radar", "cor": "#00F5D4" },
+    { "id": 78, "nome": "Strategy Pattern", "categoria": "Design de Software", "icone": "swords", "cor": "#0066FF" },
+    { "id": 79, "nome": "Factory Pattern", "categoria": "Design de Software", "icone": "factory", "cor": "#7B2EFF" },
+    { "id": 80, "nome": "Dependency Injection", "categoria": "Design de Software", "icone": "plug", "cor": "#FF4DFF" },
+    { "id": 81, "nome": "Cognitive Load em Engenharia de Software", "categoria": "Carreira", "icone": "brain", "cor": "#00F5D4" },
+    { "id": 82, "nome": "Bus Factor", "categoria": "Carreira", "icone": "triangle-alert", "cor": "#0066FF" },
+    { "id": 83, "nome": "T-Shaped Skills", "categoria": "Carreira", "icone": "graduation-cap", "cor": "#7B2EFF" },
+    { "id": 84, "nome": "Second-Order Thinking", "categoria": "Carreira", "icone": "lightbulb", "cor": "#FF4DFF" },
+    { "id": 85, "nome": "Lindy Effect", "categoria": "Carreira", "icone": "hourglass", "cor": "#00F5D4" },
+    { "id": 86, "nome": "Princípio da Menor Surpresa", "categoria": "Design de Software", "icone": "eye", "cor": "#0066FF" },
+    { "id": 87, "nome": "Monólito Modular", "categoria": "Arquitetura", "icone": "box", "cor": "#7B2EFF" },
+    { "id": 88, "nome": "Micro Frontends", "categoria": "Frontend", "icone": "layout", "cor": "#FF4DFF" },
+    { "id": 89, "nome": "WebAssembly (WASM)", "categoria": "Frontend", "icone": "globe", "cor": "#00F5D4" },
+    { "id": 90, "nome": "Edge Functions", "categoria": "Infraestrutura", "icone": "radio-tower", "cor": "#0066FF" }
   ]
 }
